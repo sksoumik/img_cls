@@ -19,7 +19,7 @@ def get_html_table(image_paths, names, column_labels):
 
 head_html = """
 <head>
-<title>Satellite Scene detection</title>
+<title>Natural Scene Classification</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -28,8 +28,24 @@ head_html = """
 """
 
 body_html = """
-        <h4 style="text-align: center;">
-        Upload a satellite image to predict the scene type
-        </h4>
+        <h2 style="text-align: center;">
+        Upload one or multiple natural scene images to predict the scene type
+        </h2>
 
         """
+
+pred_html = """
+        <h2 style="text-align: center; color: red;">
+        Predictions for the images you uploaded
+        </h2>
+"""
+
+upload_file_html = """
+    <br/>
+    <br/>
+    <form  action="/uploadfiles/" enctype="multipart/form-data" method="post">
+    <input name="files" type="file" multiple>
+    <input type="submit">
+    </form>
+    </body>
+    """
