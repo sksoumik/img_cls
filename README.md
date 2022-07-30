@@ -44,3 +44,10 @@ python train.py -train [train images data path] -valid [valid images data path] 
 ```
 
 This will create a tflite model using MobileNetV2 and save the model in the `static/` directory.
+
+#### Run the app locally
+
+```
+uvicorn main:app
+```
+
