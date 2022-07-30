@@ -4,6 +4,7 @@ from model import build_model
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 import tensorflow as tf
+import argparse
 
 
 def train_model(model, train_generator, validation_generator):
@@ -38,9 +39,40 @@ def train_model(model, train_generator, validation_generator):
 
 
 if __name__ == "__main__":
-    TRAIN_DIR = "../dataset/seg_train/seg_train/"
-    VALIDATION_DIR = "../dataset/seg_test/seg_test/"
-    TEST_DIR = "../dataset/seg_pred/seg_pred/"
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--train_data_path",
+        "-train",
+        type=str,
+        required=False,
+        default="../dataset/seg_train/seg_train/",
+        help="data path of the seg_train folder",
+    )
+
+    parser.add_argument(
+        "--validation_data_path",
+        "-valid",
+        type=str,
+        required=False,
+        default="../dataset/seg_test/seg_test/",
+        help="data path of the seg_test folder",
+    )
+
+    parser.add_argument(
+        "--prediction_data_path",
+        "-pred",
+        type=str,
+        required=False,
+        default="../dataset/seg_pred/seg_pred/",
+        help="data path of the seg_pred folder",
+    )
+
+    args = parser.parse_args()
+
+    TRAIN_DIR = args.train_data_path
+    VALIDATION_DIR = args.validation_data_path
+    TEST_DIR = args.prediction_data_path
 
     train_generator, validation_generator = create_data_generator(
         train_data_path=TRAIN_DIR,

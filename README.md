@@ -30,3 +30,11 @@ Dependencies:
 pip install tf-nightly-gpu
 
 ```
+Train the model
+```
+python train.py 
+```
+Optional arguments can be passed if the data paths are different. 
+```
+python train.py -train [train images data path] -valid [valid images data path] -pred [test/prediction images data path]
+```
