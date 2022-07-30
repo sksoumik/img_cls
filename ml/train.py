@@ -1,3 +1,4 @@
+import os
 from numpy import save
 from data_generator import create_data_generator, count_images
 from model import build_model
@@ -73,6 +74,10 @@ if __name__ == "__main__":
     TRAIN_DIR = args.train_data_path
     VALIDATION_DIR = args.validation_data_path
     TEST_DIR = args.prediction_data_path
+
+    # create required directories if don't exist
+    os.makedirs("../model", exist_ok=True)
+    os.makedirs("../static", exist_ok=True)
 
     train_generator, validation_generator = create_data_generator(
         train_data_path=TRAIN_DIR,

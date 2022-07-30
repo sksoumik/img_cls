@@ -1,10 +1,10 @@
-#### Install requirements
+#### Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-#### ML model dataset link
+#### Dataset link for training the ML model
 
 [kaggle - Intel Image Classification](https://www.kaggle.com/datasets/puneet6060/intel-image-classification)4
 
@@ -30,11 +30,17 @@ Dependencies:
 pip install tf-nightly-gpu
 
 ```
+
 Train the model
+
 ```
-python train.py 
+python train.py
 ```
-Optional arguments can be passed if the data paths are different. 
+
+Optional arguments can be passed if the data paths are different.
+
 ```
 python train.py -train [train images data path] -valid [valid images data path] -pred [test/prediction images data path]
 ```
+
+This will create a tflite model using MobileNetV2 and save the model in the `static/` directory.
