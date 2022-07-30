@@ -18,4 +18,6 @@ if __name__ == "__main__":
     print("\nValidation data image counts class-wise:")
     count_images(VALIDATION_DIR)
 
-    
+    labels = train_generator.class_indices
+    class_mapping = dict((v, k) for k, v in labels.items())
+    print(f"\nClass mapping: {class_mapping}")
