@@ -1,7 +1,7 @@
-# App demo deployed on Heroku
+#### App demo deployed on Heroku
+
 ## https://fast-img-cls.herokuapp.com
 
----
 #### Install Dependencies
 
 ```
@@ -54,4 +54,3 @@ This will create a tflite model using MobileNetV2 and save the model in the `sta
 ```
 uvicorn main:app
 ```
-
