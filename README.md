@@ -10,9 +10,9 @@ pip install -r requirements.txt
 
 #### Dataset link for training the ML model
 
-[kaggle - Intel Image Classification](https://www.kaggle.com/datasets/puneet6060/intel-image-classification)4
+[kaggle - Intel Image Classification](https://www.kaggle.com/datasets/puneet6060/intel-image-classification)
 
-This Data contains around 25k images of size 150x150 distributed under 6 categories.
+This dataset contains around 25K images of size 150x150 distributed under 6 categories.
 
 ```
 {'buildings' -> 0,
@@ -24,7 +24,7 @@ This Data contains around 25k images of size 150x150 distributed under 6 categor
 ```
 
 Create a directory called `dataset/` in the root folder.
-Download the dataset from kaggle and place it inside the dataset directory. Unzip the data.
+Download the dataset from the above kaggle link and place it inside the dataset directory. Unzip the data.
 
 #### Train ML model
 
